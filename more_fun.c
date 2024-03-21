@@ -11,7 +11,7 @@ stack_t *cr_node(int n)
 
 	node = malloc(sizeof(stack_t));
 	if (node == NULL)
-		err(4);
+		err_err(4);
 	node->next = NULL;
 	node->prev = NULL;
 	node->n = n;
