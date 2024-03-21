@@ -4,9 +4,9 @@
 /**
  * addtostack - Inserts a node into the stack.
  * @newnode: The link to the new node.
- * @line_number: The line number of the opcode is indicated by this number.
+ * @ln: The line number of the opcode is indicated by this number.
  */
-void addtostack(stack_t **newnode, __attribute__((unused))unsigned int line_number)
+void addtostack(stack_t **newnode, __attribute__((unused))unsigned int ln)
 {
 	stack_t *temp;
 

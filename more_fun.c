@@ -40,9 +40,9 @@ void freenodes(void)
 /**
  * addnodequeue - Adds a node to the queue only.
  * @newnode: double pointer to new node.
- * @line_number: line number.
+ * @ln: line number.
  */
-void addnodequeue(stack_t **newnode, __attribute__((unused))unsigned int line_number)
+void addnodequeue(stack_t **newnode, __attribute__((unused))unsigned int ln)
 {
 	stack_t *tempo;
 
