@@ -1,5 +1,5 @@
-#ifndef _HEADER_H
-#define _HEADER_H
+#ifndef _MONTY_H
+#define _MONTY_H
 
 #define _GNU_SOURCE
 #include <stdio.h>

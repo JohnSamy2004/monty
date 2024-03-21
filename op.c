@@ -1,4 +1,4 @@
-#include "header.h"
+#include "monty.h"
 
 /**
  * multiply_nd - muls top two elements of the stack.
