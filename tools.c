@@ -54,7 +54,7 @@ int parseline(char *buffer, int line_number, int format)
 	const char *delim = "\n ";
 
 	if (buffer == NULL)
-		err(4);
+		err_err(4);
 
 	op = strtok(buffer, delim);
 	if (op == NULL)
@@ -115,7 +115,7 @@ void find_function(char *opcode, char *val, int ln, int format)
 		}
 	}
 	if (flag_int == 1)
-		err(3, ln, opcode);
+		err_err(3, ln, opcode);
 }
 
 
@@ -143,7 +143,7 @@ void call_func(op_func func, char *op, char *val, int ln, int format)
 			flag = -1;
 		}
 		if (val == NULL)
-			err(5, ln);
+			err_err(5, ln);
 		for (i = 0; val[i] != '\0'; i++)
 		{
 			if (isdigit(val[i]) == 0)
