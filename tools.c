@@ -147,13 +147,13 @@ void call_func(op_func func, char *op, char *val, int ln, int format)
 		for (i = 0; val[i] != '\0'; i++)
 		{
 			if (isdigit(val[i]) == 0)
-				err(5, ln);
+				err_err(5, ln);
 		}
-		node = create_node(atoi(val) * flag);
+		node = cr_node(atoi(val) * flag);
 		if (format == 0)
 			func(&node, ln);
 		if (format == 1)
-			add_to_queue(&node, ln);
+			addnodequeue(&node, ln);
 	}
 	else
 		func(&head, ln);

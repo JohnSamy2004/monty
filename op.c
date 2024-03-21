@@ -10,7 +10,7 @@ void multiply_nd(stack_t **stack, unsigned int lin_num)
 	int tot;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		more_err(8, lin_num, "mul");
+		more_err_c(8, lin_num, "mul");
 
 	(*stack) = (*stack)->next;
 	tot = (*stack)->n * (*stack)->prev->n;
@@ -29,10 +29,10 @@ void modulus_nd(stack_t **stack, unsigned int lin_num)
 	int tot;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		more_err(8, lin_num, "mod");
+		more_err_c(8, lin_num, "mod");
 
 	if ((*stack)->n == 0)
-		more_err(9, lin_num);
+		more_err_c(9, lin_num);
 	(*stack) = (*stack)->next;
 	tot = (*stack)->n % (*stack)->prev->n;
 	(*stack)->n = tot;
