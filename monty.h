@@ -1,5 +1,5 @@
-#ifndef _MONTY_H
-#define _MONTY_H
+#ifndef _HEADER_H
+#define _HEADER_H
 
 #define _GNU_SOURCE
 #include <stdio.h>
@@ -51,7 +51,7 @@ void find_function(char *, char *, int, int);
 
 /*Stack operations*/
 stack_t *cr_node(int n);
-void freenode(void);
+void freenodes(void);
 void printst(stack_t **, unsigned int);
 void addtostack(stack_t **, unsigned int);
 void addnodequeue(stack_t **, unsigned int);

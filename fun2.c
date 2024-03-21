@@ -1,4 +1,4 @@
-#include "monty.h"
+#include "header.h"
 
 /**
  * swapnodes - Alters the positioning of
@@ -11,7 +11,7 @@ void swapnodes(stack_t **stack, unsigned int l_n)
 	stack_t *tmpo;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		more_err(8, l_n, "swap");
+		more_err_c(8, l_n, "swap");
 	tmpo = (*stack)->next;
 	(*stack)->next = tmpo->next;
 	if (tmpo->next != NULL)
@@ -32,7 +32,7 @@ void addnodes(stack_t **stack, unsigned int l_n)
 	int sum;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		more_err(8, l_n, "add");
+		more_err_c(8, l_n, "add");
 
 	(*stack) = (*stack)->next;
 	sum = (*stack)->n + (*stack)->prev->n;
@@ -51,7 +51,7 @@ void subnodes(stack_t **stack, unsigned int l_n)
 	int res;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		more_err(8, l_n, "sub");
+		more_err_c(8, l_n, "sub");
 
 	(*stack) = (*stack)->next;
 	res = (*stack)->n - (*stack)->prev->n;
@@ -81,10 +81,10 @@ void divnodes(stack_t **stack, unsigned int l_n)
 	int res;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		more_err(8, l_n, "div");
+		more_err_c(8, l_n, "div");
 
 	if ((*stack)->n == 0)
-		more_err(9, l_n);
+		more_err_c(9, l_n);
 	(*stack) = (*stack)->next;
 	res = (*stack)->n / (*stack)->prev->n;
 	(*stack)->n = res;

@@ -1,4 +1,4 @@
-#include "monty.h"
+#include "header.h"
 
 /**
  * string_err - handles errors.
@@ -24,7 +24,7 @@ void string_err(int err_c, ...)
 		default:
 			break;
 	}
-	free_nodes();
+	freenodes();
 	exit(EXIT_FAILURE);
 }
 
@@ -70,7 +70,7 @@ void err_err(int err_c, ...)
 		default:
 			break;
 	}
-	free_nodes();
+	freenodes();
 	exit(EXIT_FAILURE);
 }
 
@@ -111,6 +111,6 @@ void more_err_c(int err_c, ...)
 		default:
 			break;
 	}
-	free_nodes();
+	freenodes();
 	exit(EXIT_FAILURE);
 }

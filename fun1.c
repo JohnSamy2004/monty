@@ -1,4 +1,5 @@
-#include "monty.h"
+#include "header.h"
+
 
 /**
  * addtostack - Inserts a node into the stack.
@@ -54,7 +55,7 @@ void poptop(stack_t **stack, unsigned int line_number)
 	stack_t *tmpo;
 
 	if (stack == NULL || *stack == NULL)
-		more_err(7, line_number);
+		more_err_c(7, line_number);
 
 	tmpo = *stack;
 	*stack = tmpo->next;
@@ -71,6 +72,6 @@ void poptop(stack_t **stack, unsigned int line_number)
 void printthetop(stack_t **stack, unsigned int line_number)
 {
 	if (stack == NULL || *stack == NULL)
-		more_err(6, line_number);
+		more_err_c(6, line_number);
 	printf("%d\n", (*stack)->n);
 }

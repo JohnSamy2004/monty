@@ -1,4 +1,4 @@
-#include "monty.h"
+#include "header.h"
 
 /**
  * cr_node - Creates a node.
@@ -19,9 +19,9 @@ stack_t *cr_node(int n)
 }
 
 /**
- * freenode - Frees nodes.
+ * freenodes - Frees nodes.
  */
-void freenode(void)
+void freenodes(void)
 {
 	stack_t *tmp;
 
